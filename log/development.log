@@ -258,3 +258,677 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 52ms (Views: 30.1ms | ActiveRecord: 0.0ms | Allocations: 1235)
 
 
+Started GET "/" for 172.21.0.1 at 2020-09-29 11:34:47 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.1ms | Allocations: 2)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 446)
+
+
+Started GET "/" for 172.21.0.1 at 2020-09-29 11:35:06 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.1ms | Allocations: 2)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 434)
+
+
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (557.9ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1323.8ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT GET_LOCK('3023990675252534715', 0)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUsers (20200929121033)
+  [1m[35m (589.1ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200929121033')[0m
+  [1m[35m (86.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2020-09-29 12:14:01.551723', '2020-09-29 12:14:01.551723')[0m
+  [1m[35m (97.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT RELEASE_LOCK('3023990675252534715')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 172.21.0.1 at 2020-09-29 12:14:48 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.1ms | Allocations: 3)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 449)
+
+
+Started GET "/users" for 172.21.0.1 at 2020-09-29 12:15:59 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1357)
+Completed 500 Internal Server Error in 330ms (ActiveRecord: 2.1ms | Allocations: 74095)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<#<Class:0x000056033ff33f70>:0x000056033fee7aa8>
+Did you mean?  javascript_path
+               javascript_tag):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 172.21.0.1 at 2020-09-29 12:17:02 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 930)
+Completed 200 OK in 20ms (Views: 16.7ms | ActiveRecord: 1.0ms | Allocations: 3578)
+
+
+Started GET "/users" for 172.21.0.1 at 2020-09-29 12:18:14 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 935)
+Completed 200 OK in 17ms (Views: 13.8ms | ActiveRecord: 0.8ms | Allocations: 3655)
+
+
+Started GET "/users/new" for 172.21.0.1 at 2020-09-29 12:18:29 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 159.4ms | Allocations: 6602)
+  Rendered users/new.html.erb within layouts/application (Duration: 161.9ms | Allocations: 6931)
+Completed 200 OK in 183ms (Views: 167.3ms | ActiveRecord: 1.7ms | Allocations: 11483)
+
+
+Started POST "/users" for 172.21.0.1 at 2020-09-29 12:19:05 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"O8jzNTAhHd5HVKGy+fhubFmogNg56vz0HZtJ0wr5sY24WAfMADD6xh0tf16mZ1GbvQHlU4lRKfTxn7KImLseow==", "user"=>{"name"=>"sasaki", "email"=>"daiki@sasaki.com"}, "commit"=>"Create User"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES ('sasaki', 'daiki@sasaki.com', '2020-09-29 12:19:05.799226', '2020-09-29 12:19:05.799226')[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[35m (87.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 101ms (ActiveRecord: 89.1ms | Allocations: 3030)
+
+
+Started GET "/users/1" for 172.21.0.1 at 2020-09-29 12:19:05 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 251)
+Completed 200 OK in 13ms (Views: 6.3ms | ActiveRecord: 0.7ms | Allocations: 3174)
+
+
+Started GET "/users" for 172.21.0.1 at 2020-09-29 12:19:13 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 815)
+Completed 200 OK in 14ms (Views: 10.4ms | ActiveRecord: 0.9ms | Allocations: 2604)
+
+
+Started GET "/users/1" for 172.21.0.1 at 2020-09-29 12:19:44 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 80)
+Completed 200 OK in 11ms (Views: 4.9ms | ActiveRecord: 0.9ms | Allocations: 2445)
+
+
+Started GET "/users/new" for 172.21.0.1 at 2020-09-29 12:19:57 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.6ms | Allocations: 689)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 771)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 2568)
+
+
+Started GET "/users/1/edit" for 172.21.0.1 at 2020-09-29 12:20:11 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.7ms | Allocations: 764)
+  Rendered users/edit.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1003)
+Completed 200 OK in 18ms (Views: 10.7ms | ActiveRecord: 0.9ms | Allocations: 3509)
+
+
+Started PATCH "/users/1" for 172.21.0.1 at 2020-09-29 12:20:20 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"qd5xRWiSrsAYaw2LxrfFETjFpzAxZL0Lot3racNLwRhPyCuXpPgfe6dhxv7mmQfIuqLUi0lqLv9k5yNTzMbqew==", "user"=>{"name"=>"sasadai", "email"=>"daiki@sasaki.com"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:44:in `block in update'
+  [1m[36mUser Update (28.7ms)[0m  [1m[33mUPDATE `users` SET `users`.`name` = 'sasadai', `users`.`updated_at` = '2020-09-29 12:20:20.254179' WHERE `users`.`id` = 1[0m
+  ↳ app/controllers/users_controller.rb:44:in `block in update'
+  [1m[35m (102.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:44:in `block in update'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 152ms (ActiveRecord: 133.0ms | Allocations: 3541)
+
+
+Started GET "/users/1" for 172.21.0.1 at 2020-09-29 12:20:20 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 84)
+Completed 200 OK in 12ms (Views: 6.6ms | ActiveRecord: 0.8ms | Allocations: 2465)
+
+
+Started GET "/uers/1" for 172.21.0.1 at 2020-09-29 12:22:11 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/uers/1"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/1" for 172.21.0.1 at 2020-09-29 12:26:36 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 80)
+Completed 200 OK in 18ms (Views: 5.8ms | ActiveRecord: 1.6ms | Allocations: 2456)
+
+
+Started GET "/users" for 172.21.0.1 at 2020-09-29 12:26:40 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 811)
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 0.9ms | Allocations: 2615)
+
+
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('3023990675252534715', 0)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateMicroposts (20200929123451)
+  [1m[35m (471.0ms)[0m  [1m[35mCREATE TABLE `microposts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `content` text, `user_id` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200929123451')[0m
+  [1m[35m (116.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('3023990675252534715')[0m
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/micropost" for 172.21.0.1 at 2020-09-29 12:40:11 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/micropost"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/microposts" for 172.21.0.1 at 2020-09-29 12:40:15 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (1.3ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts`[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 1413)
+Completed 200 OK in 77ms (Views: 67.2ms | ActiveRecord: 2.5ms | Allocations: 13328)
+
+
+Started GET "/microposts/new" for 172.21.0.1 at 2020-09-29 12:40:18 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MicropostsController#new as HTML
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 26.1ms | Allocations: 1393)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 28.1ms | Allocations: 1723)
+Completed 200 OK in 48ms (Views: 33.2ms | ActiveRecord: 1.8ms | Allocations: 6187)
+
+
+Started POST "/microposts" for 172.21.0.1 at 2020-09-29 12:40:44 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MicropostsController#create as HTML
+  Parameters: {"authenticity_token"=>"jBFNjmvOdufL8yRCt503S8BeOlHtnLrFVqnEQmRWSUEBIAcuvpX3UA8gtinuiCFZwObogH3nirY5d1uk9smDWw==", "micropost"=>{"content"=>"aaaaaaaaaaaaaa", "user_id"=>"1"}, "commit"=>"Create Micropost"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mMicropost Create (0.9ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('aaaaaaaaaaaaaa', 1, '2020-09-29 12:40:44.225283', '2020-09-29 12:40:44.225283')[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[35m (80.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/microposts/1
+Completed 302 Found in 95ms (ActiveRecord: 82.3ms | Allocations: 2809)
+
+
+Started GET "/microposts/1" for 172.21.0.1 at 2020-09-29 12:40:44 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMicropost Load (0.8ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE `microposts`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  Rendering microposts/show.html.erb within layouts/application
+  Rendered microposts/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 249)
+Completed 200 OK in 13ms (Views: 6.5ms | ActiveRecord: 0.8ms | Allocations: 2959)
+
+
+Started GET "/microposts" for 172.21.0.1 at 2020-09-29 12:40:54 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (1.0ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts`[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 812)
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 1.0ms | Allocations: 2668)
+
+
+Started GET "/microposts/new" for 172.21.0.1 at 2020-09-29 12:44:48 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MicropostsController#new as HTML
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 5.5ms | Allocations: 1909)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2241)
+Completed 200 OK in 143ms (Views: 15.2ms | ActiveRecord: 2.4ms | Allocations: 8070)
+
+
+Started POST "/microposts" for 172.21.0.1 at 2020-09-29 12:45:02 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MicropostsController#create as HTML
+  Parameters: {"authenticity_token"=>"qj3n7W3iE26CgHODz/SlS3tkhIc9Heu8ZCSb6CWeLe8nDK1NuLmS2UZT4eiW4bNZe9xWVq1m288L+gQOtwHn9Q==", "micropost"=>{"content"=>"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "user_id"=>"1"}, "commit"=>"Create Micropost"}
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 5.3ms | Allocations: 853)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 936)
+Completed 200 OK in 20ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 3797)
+
+
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mMicropost Load (0.7ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE `microposts`.`user_id` = 1 LIMIT 11[0m
+  [1m[36mMicropost Load (0.9ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE `microposts`.`user_id` = 1 ORDER BY `microposts`.`id` ASC LIMIT 1[0m
+Started GET "/users" for 172.21.0.1 at 2020-09-29 12:55:07 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 26.3ms | Allocations: 3990)
+Completed 200 OK in 40ms (Views: 31.1ms | ActiveRecord: 3.2ms | Allocations: 7510)
+
+
+Started GET "/users/new" for 172.21.0.1 at 2020-09-29 12:55:09 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.4ms | Allocations: 998)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1323)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 3306)
+
+
+Started POST "/users" for 172.21.0.1 at 2020-09-29 12:55:30 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"aX9iobU/Mu6WpcyJ/nCg8JHaOixm3QVUJtVW++s1qqnq75ZYhS7V9szcEmWh758HdXNfp9Zm0FTK0a2geXcFhw==", "user"=>{"name"=>"oba", "email"=>"nut@fes"}, "commit"=>"Create User"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES ('oba', 'nut@fes', '2020-09-29 12:55:30.456001', '2020-09-29 12:55:30.456001')[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[35m (205.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 221ms (ActiveRecord: 207.0ms | Allocations: 2902)
+
+
+Started GET "/users/2" for 172.21.0.1 at 2020-09-29 12:55:30 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 245)
+Completed 200 OK in 16ms (Views: 9.1ms | ActiveRecord: 0.9ms | Allocations: 2950)
+
+
+Started GET "/users" for 172.21.0.1 at 2020-09-29 12:55:32 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 939)
+Completed 200 OK in 27ms (Views: 20.9ms | ActiveRecord: 0.9ms | Allocations: 2790)
+
+
+Started GET "/users/new" for 172.21.0.1 at 2020-09-29 12:55:34 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 5.6ms | Allocations: 689)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 771)
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 2617)
+
+
+Started POST "/users" for 172.21.0.1 at 2020-09-29 12:55:48 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"5SSRY6KF/86aPjwethHvWISbGbSkVXo1OZz/aqOL2StmtGWakpQY1sBH4vLpjtCvYDJ8PxTurzXVmAQxMcl2BQ==", "user"=>{"name"=>"mizu", "email"=>"kami@fes"}, "commit"=>"Create User"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`) VALUES ('mizu', 'kami@fes', '2020-09-29 12:55:48.903134', '2020-09-29 12:55:48.903134')[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[35m (276.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 307ms (ActiveRecord: 277.6ms | Allocations: 2802)
+
+
+Started GET "/users/3" for 172.21.0.1 at 2020-09-29 12:55:49 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 82)
+Completed 200 OK in 17ms (Views: 11.4ms | ActiveRecord: 0.8ms | Allocations: 2516)
+
+
+Started GET "/users" for 172.21.0.1 at 2020-09-29 12:55:51 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1062)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.8ms | Allocations: 2916)
+
+
+Started GET "/microposts" for 172.21.0.1 at 2020-09-29 12:55:56 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.8ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts`[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 17.0ms | Allocations: 3641)
+Completed 200 OK in 29ms (Views: 21.5ms | ActiveRecord: 0.8ms | Allocations: 6552)
+
+
+Started GET "/microposts/new" for 172.21.0.1 at 2020-09-29 12:56:00 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MicropostsController#new as HTML
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 3.1ms | Allocations: 691)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 773)
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 2631)
+
+
+Started POST "/microposts" for 172.21.0.1 at 2020-09-29 12:56:15 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MicropostsController#create as HTML
+  Parameters: {"authenticity_token"=>"hUM4+WrvtBQ3CUUw/VrbI6REDB03h0+OzxgaooT24NEIcnJZv7Q1o/Pa11ukT80xpPzezKf8f/2gxoVEFmkqyw==", "micropost"=>{"content"=>"qqqqqqqqqqqqqqqq", "user_id"=>"2"}, "commit"=>"Create Micropost"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mMicropost Create (0.8ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('qqqqqqqqqqqqqqqq', 2, '2020-09-29 12:56:15.506177', '2020-09-29 12:56:15.506177')[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[35m (132.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/microposts/2
+Completed 302 Found in 158ms (ActiveRecord: 134.7ms | Allocations: 5938)
+
+
+Started GET "/microposts/2" for 172.21.0.1 at 2020-09-29 12:56:15 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMicropost Load (0.7ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE `microposts`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  Rendering microposts/show.html.erb within layouts/application
+  Rendered microposts/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 246)
+Completed 200 OK in 13ms (Views: 6.4ms | ActiveRecord: 0.7ms | Allocations: 2952)
+
+
+Started GET "/microposts" for 172.21.0.1 at 2020-09-29 12:56:16 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.7ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts`[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 937)
+Completed 200 OK in 15ms (Views: 10.2ms | ActiveRecord: 0.7ms | Allocations: 2796)
+
+
+Started GET "/microposts/new" for 172.21.0.1 at 2020-09-29 12:56:18 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MicropostsController#new as HTML
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 3.5ms | Allocations: 688)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 770)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 2622)
+
+
+Started POST "/microposts" for 172.21.0.1 at 2020-09-29 12:56:26 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MicropostsController#create as HTML
+  Parameters: {"authenticity_token"=>"RhXsuayW8np3WWfN8iVWFvvyUfMsLhxgJ8f3DIdOtZHLJKYZec1zzbOK9aarMEAE+0qDIrxVLBNIGWjqFdF/iw==", "micropost"=>{"content"=>"wwwwwwwwwwwwwww", "user_id"=>"1"}, "commit"=>"Create Micropost"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mMicropost Create (0.7ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('wwwwwwwwwwwwwww', 1, '2020-09-29 12:56:26.250288', '2020-09-29 12:56:26.250288')[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[35m (62.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/microposts/3
+Completed 302 Found in 82ms (ActiveRecord: 64.4ms | Allocations: 4072)
+
+
+Started GET "/microposts/3" for 172.21.0.1 at 2020-09-29 12:56:26 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMicropost Load (0.9ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE `microposts`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  Rendering microposts/show.html.erb within layouts/application
+  Rendered microposts/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 82)
+Completed 200 OK in 15ms (Views: 7.1ms | ActiveRecord: 0.9ms | Allocations: 2507)
+
+
+Started GET "/microposts" for 172.21.0.1 at 2020-09-29 12:56:27 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.7ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts`[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1059)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 0.7ms | Allocations: 2903)
+
+
+Started GET "/microposts/new" for 172.21.0.1 at 2020-09-29 12:56:29 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MicropostsController#new as HTML
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 3.7ms | Allocations: 686)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 768)
+Completed 200 OK in 14ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 2629)
+
+
+Started POST "/microposts" for 172.21.0.1 at 2020-09-29 12:56:37 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MicropostsController#create as HTML
+  Parameters: {"authenticity_token"=>"c9/gdQ2hPVVP6Oy//nkzpC2LjE4437bOv5nHoFE+Ruz+7qrV2Pq84os7ftSnbCW2LTNen6ikhr3QR1hGw6GM9g==", "micropost"=>{"content"=>"eeeeeeeeeeeee", "user_id"=>"3"}, "commit"=>"Create Micropost"}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mMicropost Create (0.8ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('eeeeeeeeeeeee', 3, '2020-09-29 12:56:37.521474', '2020-09-29 12:56:37.521474')[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[35m (133.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/microposts/4
+Completed 302 Found in 154ms (ActiveRecord: 136.0ms | Allocations: 4075)
+
+
+Started GET "/microposts/4" for 172.21.0.1 at 2020-09-29 12:56:37 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMicropost Load (0.7ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE `microposts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  Rendering microposts/show.html.erb within layouts/application
+  Rendered microposts/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 82)
+Completed 200 OK in 13ms (Views: 8.5ms | ActiveRecord: 0.7ms | Allocations: 2528)
+
+
+Started GET "/microposts" for 172.21.0.1 at 2020-09-29 12:56:39 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (1.8ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts`[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 1185)
+Completed 200 OK in 28ms (Views: 19.1ms | ActiveRecord: 1.8ms | Allocations: 3025)
+
+
+Started GET "/microposts/new" for 172.21.0.1 at 2020-09-29 12:56:42 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MicropostsController#new as HTML
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 4.5ms | Allocations: 686)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 768)
+Completed 200 OK in 16ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 2626)
+
+
+Started POST "/microposts" for 172.21.0.1 at 2020-09-29 12:56:52 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MicropostsController#create as HTML
+  Parameters: {"authenticity_token"=>"2QOrdfLGtCfre8AmfsUMZM6do8S7xlxlc70Nit5PRWlUMuHVJ501kC+oUk0n0Bp2ziVxFSu9bBYcY5JsTNCPcw==", "micropost"=>{"content"=>"rrrrrrrrrrr", "user_id"=>"3"}, "commit"=>"Create Micropost"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mMicropost Create (0.7ms)[0m  [1m[32mINSERT INTO `microposts` (`content`, `user_id`, `created_at`, `updated_at`) VALUES ('rrrrrrrrrrr', 3, '2020-09-29 12:56:52.842978', '2020-09-29 12:56:52.842978')[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[35m (155.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/microposts/5
+Completed 302 Found in 172ms (ActiveRecord: 157.1ms | Allocations: 4051)
+
+
+Started GET "/microposts/5" for 172.21.0.1 at 2020-09-29 12:56:53 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMicropost Load (0.9ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE `microposts`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  Rendering microposts/show.html.erb within layouts/application
+  Rendered microposts/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 82)
+Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 0.9ms | Allocations: 2525)
+
+
+Started GET "/microposts" for 172.21.0.1 at 2020-09-29 12:56:54 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.8ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts`[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1310)
+Completed 200 OK in 17ms (Views: 12.3ms | ActiveRecord: 0.8ms | Allocations: 3164)
+
+
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` LIMIT 11[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[36mMicropost Load (0.7ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE `microposts`.`user_id` = 3 LIMIT 11[0m
+  [1m[36mMicropost Load (0.8ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE `microposts`.`user_id` = 3 ORDER BY `microposts`.`id` ASC LIMIT 1[0m
+  [1m[36mMicropost Load (0.7ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE `microposts`.`user_id` = 3 AND `microposts`.`id` = 2 LIMIT 1[0m
+  [1m[36mMicropost Load (0.8ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE `microposts`.`user_id` = 3 LIMIT 11[0m
+  [1m[36mMicropost Load (0.8ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE `microposts`.`user_id` = 3 AND `microposts`.`id` = 5 LIMIT 1[0m
+  [1m[36mMicropost Load (0.8ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` WHERE `microposts`.`id` = 2 LIMIT 1[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
